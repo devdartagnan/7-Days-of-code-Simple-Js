@@ -1,27 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
     <title>7 Days of code | Devdartagnan</title>
 </head>
+
 <body>
-    <section class="container">
-        <h1>Cadastro de pessoas</h1>
-        <form class="form js-form">
-            <label for="name">
-                Nome
-                <input class="form-field js-field" id="name" maxlength="120" name="name" required type="text">
-            </label>
-            <label for="birth-date">
-                Data de Nascimento
-                <input class="form-field js-field" id="birth-date" name="birth-date" required type="date">
-            </label>
-            <button class="button" type="submit">Salvar</button>
-        </form>
+    <main class="container">
+        <section>
+            <h1>Olá,</h1>
+            <h2>Cadastro</h2>
+            <form class="form js-form">
+                <label for="name">
+                    Nome
+                    <input type="text" class="form-field js-field" id="name" minlength="3" maxlength="120"
+                        pattern="(^[a-zA-Z\s]*$)" name="name" required>
+                </label>
+                <label for="birth-date">
+                    Data de Nascimento
+                    <input class="form-field js-field" id="birth-date" name="birth-date" required type="date">
+                </label>
+                <button class="button" type="submit">Salvar</button>
+            </form>
+        </section>
+        <section class="imagem">
+        </section>
         <script src="js/main.js"></script>
-    </section>
+    </main>
 </body>
+
 </html>
