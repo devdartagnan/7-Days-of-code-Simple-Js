@@ -19,6 +19,7 @@ form.addEventListener('submit', (e) => {
     setValues()
 })
 function setValues() {
+    //take values, reverse date
     const values = [nome.value, nascimento.value]
     const ano = values[1].slice(0, 4)
     const mes = values[1].slice(5, 7)
@@ -28,6 +29,7 @@ function setValues() {
         nome: values[0],
         data: data
     }
+    //Set it to LocalStorage
     lista.push(stringLocal)
     localStorage.setItem('Cadastrado', JSON.stringify(lista))
     
