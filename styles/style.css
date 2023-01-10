@@ -12,21 +12,36 @@ body {
     border-radius: 6px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 60vh;
-    margin: 5% 10%;
+    height: 500px;
+    margin: 2.5% 5% 0 5%;
     max-width: 800px;
-    padding: 2rem;
-    position: relative;
+    padding: 1rem;
     width: 100%;
-}.container h1{
+
+}
+
+@media screen and (max-width:680px) {
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .imagem {
+        display: none;
+    }
+}
+
+.container h1 {
     color: #2F2965;
-    margin-top: 40px;
+    margin-top: 32px;
     font-size: 46px;
     font-weight: 500;
     text-align: center;
-}.container h2{
+}
+
+.container h2 {
     font-size: 24px;
-    margin: 2rem 0 1rem;
+    margin: 1rem 0;
     text-align: center;
 }
 
@@ -35,6 +50,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    position: relative;
     width: 100%;
 }
 
@@ -48,27 +64,17 @@ body {
     box-sizing: border-box;
     border-radius: 6px;
     border-style: solid;
-    height: 36px;
+    height: 30px;
     margin-top: 8px;
     padding-left: 1rem;
-    width: 300px;
-}.log{
-    box-sizing: border-box;
-    border-radius: 6px;
-    height: 69px;
-    background-color: #ffd6fc;
-    margin-top: 8px;
-    padding: 0.5rem;
-    width: 300px;
-}.visible{
-    visibility: hidden;
-}.log h3{
-    text-align: center;
-    font-weight: 500;
-}.log p{
-    text-align: center;
-    margin: 0.5rem 0 0 0;
+    width: 260px;
 }
+
+.form a {
+    color: #2F2965;
+    text-decoration: none;
+}
+
 
 .button {
     background-color: #53396F;
@@ -77,12 +83,12 @@ body {
     color: #FFF;
     height: 46px;
     position: absolute;
-    bottom: 34px;
+    bottom: -60px;
     width: 150px;
 }
 
 .button:hover {
-    background-color:#A03A3B;
+    background-color: #A03A3B;
 }
 
 .imagem {

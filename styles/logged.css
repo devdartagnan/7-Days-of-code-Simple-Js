@@ -1,0 +1,95 @@
+a{color: #FFF;
+    text-decoration: none;
+}
+.section_log {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section_log button{
+    cursor: pointer;
+}
+.log {
+    box-sizing: border-box;
+    border-radius: 6px;
+    height: auto;
+    background-color: #eeecef;
+    margin-top: 36px;
+    padding: 1rem;
+    position: relative;
+    width: 90%;
+}
+@media screen and (max-width: 680px) {
+    .log{
+        min-width: 300px;
+    }
+}
+
+.visible {
+    visibility: hidden;
+}
+.display-none:defined{
+    display: none;
+}
+.redo-password button{
+    border: none;
+    color: #7b50be;
+}
+.redo-password{
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    margin-top: 26px;
+}
+.redo-password__inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    max-width: 360px;
+    min-width: 232px;
+    width: 100%;
+}.redo-password__inputs input{
+    border: none;
+    border-radius: 5px;
+    height: 25px;
+    padding-left: 10px;
+    width: 100%;
+}
+.log h3 {
+    text-align: center;
+    font-weight: 500;
+}
+
+.log p {
+    line-height: normal;
+    margin: 0.5rem 0 0 0;
+    text-align: center;
+}
+
+.log_span {
+    cursor: pointer;
+}
+.deslogar{
+    border-radius: 5px;
+    border: none;
+    background-color: #322b3d;
+    color: #FFF;
+    height: 25px;
+    margin-top: 1rem;
+    width: 70px;
+}
+.info-box{
+    align-items: end;
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+}
+.info-box p::first-letter{
+    text-transform: capitalize;
+}
+.emailItem-input{
+    height: 20px;
+    padding-left: 1rem;
+}
