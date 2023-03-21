@@ -20,17 +20,6 @@ body {
 
 }
 
-@media screen and (max-width:680px) {
-    .container {
-        display: flex;
-        justify-content: center;
-    }
-
-    .imagem {
-        display: none;
-    }
-}
-
 .container h1 {
     color: #2F2965;
     margin-top: 32px;
@@ -99,4 +88,53 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 12px;
+}
+
+.register-info {
+    position: relative;
+}
+
+.tooltip {
+    color: #605869;
+    right: -72px;
+    position: absolute;
+    top: -3px;
+}
+
+
+.tooltip .tooltiptext {
+    border-radius: 6px;
+    background-color: #c8baef;
+    color: #000;
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    height: auto;
+    padding: 1rem;
+    text-align: center;
+    visibility: hidden;
+    width: 220px;
+    position: absolute;
+    white-space: pre-line;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+.tooltip:active .tooltiptext {
+    visibility: visible;
+}
+
+
+@media screen and (max-width:680px) {
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .imagem {
+        display: none;
+    }
 }

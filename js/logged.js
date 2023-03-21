@@ -15,13 +15,18 @@ const loggedNome = loggedGet.nome
 const loggedEmail = loggedGet.email
 const loggedPass = loggedGet.senha
 
+function cadastradoMap (key){
+    return cadastradoGet.map((obj) => {
+        return obj[key] === loggedEmail ? obj[key] : void(0)
+    })
+}
 if (loggedGet !== null) {
     nomeItem.innerText = `Nome: ${loggedNome}`
     emailItem.innerText = `Email: ${loggedEmail}`
 }
 
 form.addEventListener('submit', (e) => {
-    e.preventDefault() 
+    e.preventDefault()
     rePasswordLocal()
 })
 
@@ -42,8 +47,12 @@ redoBtn.addEventListener('click', () => {
 
 function updateLocal(input, element, tag) {
     let arr;
+    let count = 0
     if (element.childElementCount === 0) {
-        element.innerHTML = `<input value="${input}" class="emailItem-input" placeholder="${input}">`
+        if (count === 0) {
+            element.innerHTML = `<input value="${input}" class="emailItem-input" placeholder="${input}">`
+            count  = 1 
+        }
     } else {
         const inputHTMl = document.querySelector('.emailItem-input')
         cadastradoGet.forEach((obj) => {
@@ -61,7 +70,7 @@ function updateLocal(input, element, tag) {
     }
 }
 
-function rePasswordLocal() {    
+function rePasswordLocal() {
     cadastradoGet.forEach((obj) => {
         if (obj.email === loggedEmail) {
             if (obj.senha === oldPass.value) {
@@ -72,7 +81,7 @@ function rePasswordLocal() {
                 localStorage.setItem('Cadastrado', JSON.stringify(cadastradoGet))
                 oldPass.value = ''
                 newPass.value = ''
-            }else{
+            } else {
                 console.error('no matches')
             }
         }
